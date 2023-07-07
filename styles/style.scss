@@ -1,1 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  // colors
+
+  // color use
+
+  // fonts
+  font-family: "Hanken Grotesk", sans-serif;
+  // default font size is 16px
+  // we want 1rem to be 10px for easy calcs
+  // using 62.5% instead of hardcoding 10px
+  // still allows the user to change her browser default
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
