@@ -8,10 +8,29 @@
   --white-color: hsl(0, 0%, 100%);
 
   // color use
+  --body-background-color: var(--cream-color);
+  --card-background-color: var(--white-color);
+  --card-intro-font-color: var(--dark-grayish-blue-color);
+  --card-heading-font-color: var(--very-dark-blue-color);
+  --card-description-font-color: var(--dark-grayish-blue-color);
+  --card-price-discount-font-color: var(--dark-cyan-color);
+  --card-price-original-font-color: var(--dark-grayish-blue-color);
 
   // fonts
-  font-family: "Fraunces", serif;
-  font-family: "Montserrat", sans-serif;
+  --fraunces-font-family: "Fraunces", serif;
+  --montserrat-font-family: "Montserrat", sans-serif;
+
+  --card-intro-font-family: var(--montserrat-font-family);
+  --card-intro-font-size: 1.6rem;
+  --card-heading-font-family: var(--fraunces-font-family);
+  --card-heading-font-size: 4rem;
+  --card-description-font-family: var(--montserrat-font-family);
+  --card-description-font-size: 1.4rem;
+  --card-price-discount-font-family: var(--fraunces-font-family);
+  --card-price-discount-font-size: 4rem;
+  --card-price-original-font-family: var(--montserrat-font-family);
+  --card-price-original-font-size: 1.2rem;
+
   // default font size is 16px
   // we want 1rem to be 10px for easy calcs
   // using 62.5% instead of hardcoding 10px
@@ -23,4 +42,72 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-background-color);
+  height: 100dvh;
+}
+
+.card {
+  width: 75rem;
+  height: 45rem;
+  border-radius: 2rem;
+  background-color: var(--card-background-color);
+  display: flex;
+  flex-direction: row;
+  &__image {
+    width: 50%;
+    overflow: clip;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    flex: none;
+  }
+  &__detail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    flex: none;
+  }
+  &__intro {
+    font-family: var(--card-intro-font-family);
+    font-size: var(--card-intro-font-size);
+    color: var(--card-intro-font-color);
+  }
+  &__heading {
+    font-family: var(--card-heading-font-family);
+    font-size: var(--card-heading-font-size);
+    color: var(--card-heading-font-color);
+    text-align: start;
+  }
+  &__description {
+    font-family: var(--card-description-font-family);
+    font-size: var(--card-description-font-size);
+    color: var(--card-description-font-color);
+  }
+  &__price {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__price-discount {
+    font-family: var(--card-price-discount-font-family);
+    font-size: var(--card-price-discount-font-size);
+    color: var(--card-price-discount-font-color);
+  }
+  &__price-original {
+    font-family: var(--card-price-original-font-family);
+    font-size: var(--card-price-original-font-size);
+    color: var(--card-price-original-font-color);
+    text-decoration: line-through;
+  }
 }
