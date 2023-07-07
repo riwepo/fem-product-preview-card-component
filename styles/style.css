@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
 :root {
-  --dark-cyan-color: hsl(158, 36%, 37%);
+  --dark-cyan-color: #3c8067;
+  --dark-cyan-shade-color: hsl(158, 36%, 26%);
   --cream-color: hsl(30, 38%, 92%);
   --very-dark-blue-color: hsl(212, 21%, 14%);
   --dark-grayish-blue-color: hsl(228, 12%, 48%);
@@ -12,6 +13,9 @@
   --card-description-font-color: var(--dark-grayish-blue-color);
   --card-price-discount-font-color: var(--dark-cyan-color);
   --card-price-original-font-color: var(--dark-grayish-blue-color);
+  --card-button-background-color: var(--dark-cyan-color);
+  --card-button-background-hover-color: var(--dark-cyan-shade-color);
+  --card-button-font-color: var(--white-color);
   --fraunces-font-family: "Fraunces", serif;
   --montserrat-font-family: "Montserrat", sans-serif;
   --card-intro-font-family: var(--montserrat-font-family);
@@ -99,4 +103,20 @@ body {
   font-size: var(--card-price-original-font-size);
   color: var(--card-price-original-font-color);
   text-decoration: line-through;
+}
+.card__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--card-button-background-color);
+  color: var(--card-button-font-color);
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 4rem;
+}
+.card__button:hover, .card__button:active {
+  background-color: var(--card-button-background-hover-color);
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
