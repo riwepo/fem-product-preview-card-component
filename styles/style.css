@@ -38,27 +38,30 @@
 }
 
 body {
-  display: flex;
   justify-content: center;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: var(--body-background-color);
-  height: 100dvh;
 }
 
 .card {
   width: 75rem;
   height: 45rem;
+  flex-direction: row;
   border-radius: 2rem;
   background-color: var(--card-background-color);
   display: flex;
-  flex-direction: row;
 }
-.card__image {
+.card__image-desktop {
   width: 50%;
   overflow: clip;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
-  flex: none;
+}
+.card__image-mobile {
+  display: none;
 }
 .card__detail {
   width: 50%;
@@ -119,4 +122,35 @@ body {
 .card__button:hover, .card__button:active {
   background-color: var(--card-button-background-hover-color);
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .body {
+    justify-content: flex-start;
+    height: auto;
+  }
+  .card {
+    width: 44rem;
+    height: auto;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .card__image-desktop {
+    display: none;
+  }
+  .card__image-mobile {
+    display: block;
+    width: 100%;
+    overflow: clip;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    flex: none;
+  }
+  .card__detail {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -49,29 +49,65 @@
 }
 
 body {
-  display: flex;
+  // desktop
   justify-content: center;
+  height: 100dvh;
+
+  // mobile
+  //justify-content: flex-start;
+
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: var(--body-background-color);
-  height: 100dvh;
 }
 
 .card {
+  // desktop
   width: 75rem;
   height: 45rem;
+  flex-direction: row;
+
+  // mobile
+  // width: 44rem;
+  // flex-direction: column;
+  // margin-top: 2rem;
+  // margin-bottom: 2rem;
+
   border-radius: 2rem;
   background-color: var(--card-background-color);
   display: flex;
-  flex-direction: row;
-  &__image {
+  &__image-desktop {
+    // desktop
     width: 50%;
     overflow: clip;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    flex: none;
+
+    //mobile
+    //display: none;
+  }
+  &__image-mobile {
+    // desktop
+    display: none;
+
+    // mobile
+    // width: 100%;
+    // overflow: clip;
+    // border-top-left-radius: 2rem;
+    // border-top-right-radius: 2rem;
+    // flex: none;
   }
   &__detail {
+    // desktop
     width: 50%;
+
+    // mobile
+    // width: 100%;
+    // padding-top: 2rem;
+    // padding-bottom: 2rem;
+    // gap: 2rem;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -129,6 +165,40 @@ body {
     &:active {
       background-color: var(--card-button-background-hover-color);
       cursor: pointer;
+    }
+  }
+}
+
+// media query for mobile
+@media (max-width: 768px) {
+  .body {
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .card {
+    width: 44rem;
+    height: auto;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &__image-desktop {
+      display: none;
+    }
+    &__image-mobile {
+      display: block;
+      width: 100%;
+      overflow: clip;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+      flex: none;
+    }
+    &__detail {
+      width: 100%;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      gap: 2rem;
     }
   }
 }
