@@ -48,7 +48,7 @@ Getting better at organising the media query and the CSS changes as it flips bet
 
 ## Author
 
-- Frontend Mentor - [@riwepo](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@riwepo](https://www.frontendmentor.io/profile/riwepo)
 
 ## Acknowledgments
 
